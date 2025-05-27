@@ -1,0 +1,1041 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ILDK - Initiative for Learning Disabilities Kenya</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script>
+        tailwind.config = {
+        theme: {
+        extend: {
+        colors: {
+        primary: '#FFB100',
+        secondary: '#2ECC71',
+        blue: '#3498DB',
+        orange: '#F59E0B',
+        dark: '#333333'
+        },
+        borderRadius: {
+        'none': '0px',
+        'sm': '4px',
+        DEFAULT: '8px',
+        'md': '12px',
+        'lg': '16px',
+        'xl': '20px',
+        '2xl': '24px',
+        '3xl': '32px',
+        'full': '9999px',
+        'button': '8px'
+        }
+        }
+        }
+        }
+        </script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" rel="stylesheet">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/5.5.0/echarts.min.js"></script>
+        <style>
+        :where([class^="ri-"])::before { content: "\f3c2"; }
+        body { font-family: 'Inter', sans-serif; }
+        .stats-card:hover { transform: translateY(-5px); }
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .fade-in.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        </style>
+        </head>
+<body class="bg-white">
+<div class="fixed right-4 bottom-4 z-50 flex flex-col gap-4">
+<a href="https://wa.me/+254123456789" class="w-14 h-14 bg-[#25D366] text-white rounded-full flex items-center justify-center shadow-lg hover:bg-[#128C7E] transition-colors">
+<i class="ri-whatsapp-line text-2xl"></i>
+</a>
+<a href="tel:+254123456789" class="w-14 h-14 bg-[#006400] text-white rounded-full flex items-center justify-center shadow-lg hover:bg-[#004d00] transition-colors">
+<i class="ri-phone-line text-2xl"></i>
+</a>
+</div>
+<nav class="fixed w-full bg-white/95 backdrop-blur-sm z-40 border-b">
+<div class="max-w-7xl mx-auto px-4">
+<div class="flex justify-between items-center h-20">
+<a href="#" class="font-['Pacifico'] text-3xl text-primary">
+    <img src="logo.png" alt="ILDK Logo" class="h-16">
+</a>
+<div class="hidden md:flex space-x-8">
+<a href="#home" class="text-gray-700 hover:text-primary">Home</a>
+<a href="#about" class="text-gray-700 hover:text-primary">About</a>
+<a href="#work" class="text-gray-700 hover:text-primary">Our Work</a>
+<a href="#resources" class="text-gray-700 hover:text-primary">Resources</a>
+<a href="#contact" class="text-gray-700 hover:text-primary">Contact</a>
+</div>
+<a href="#contact">
+<button class="bg-secondary text-white px-6 py-2 !rounded-button hover:bg-secondary/90 transition-colors cursor-pointer whitespace-nowrap">
+Get Involved
+</button>
+</a>
+</div>
+</div>
+</nav>
+<section id="home" class="relative min-h-screen pt-20 overflow-hidden">
+<div class="absolute inset-0 bg-[url('https://public.readdy.ai/ai/img_res/6e60273c18afe607f46618543d0706b1.jpg')] bg-cover bg-center opacity-10"></div>
+<div class="max-w-7xl mx-auto px-4 pt-20">
+<div class="grid md:grid-cols-2 gap-12 items-center">
+<div class="relative z-10">
+<h1 class="text-5xl font-bold text-dark mb-6">Empowering Lives with Multiple Disabilities</h1>
+<p class="text-xl text-gray-600 mb-8">A parent-led charity dedicated to providing access to education, healthcare and psychosocial support for persons living with multiple disabilities in Kenya.</p>
+<div class="flex gap-4">
+    <a href="#about">
+<button class="bg-blue text-white px-8 py-3 !rounded-button hover:bg-blue/90 transition-colors cursor-pointer whitespace-nowrap">
+Learn More
+</button>
+</a>
+<a href="#contact">
+<button class="bg-orange text-white px-8 py-3 !rounded-button hover:bg-orange/90 transition-colors cursor-pointer whitespace-nowrap">
+Support Us
+</button>
+</a>
+</div>
+</div>
+<div class="relative">
+<img src="../photos/004.jpg" class="rounded-2xl shadow-2xl" alt="Children learning together">
+</div>
+</div>
+</div>
+<div class="max-w-7xl mx-auto px-4 py-20">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+<div class="bg-white p-8 rounded-xl shadow-lg stats-card transition-all duration-300">
+<div class="text-4xl font-bold text-primary mb-2 counter" data-target="5000">1146</div>
+<p class="text-gray-600">Children Supported</p>
+</div>
+<div class="bg-white p-8 rounded-xl shadow-lg stats-card transition-all duration-300">
+<div class="text-4xl font-bold text-primary mb-2 counter" data-target="200">49</div>
+<p class="text-gray-600">Partner Schools</p>
+</div>
+<div class="bg-white p-8 rounded-xl shadow-lg stats-card transition-all duration-300">
+<div class="text-4xl font-bold text-primary mb-2 counter" data-target="150">120</div>
+<p class="text-gray-600">Trained Teachers</p>
+</div>
+<div class="bg-white p-8 rounded-xl shadow-lg stats-card transition-all duration-300">
+<div class="text-4xl font-bold text-primary mb-2 counter" data-target="50">50</div>
+<p class="text-gray-600">Active Programs</p>
+</div>
+</div>
+</div>
+</section>
+<section id="about" class="py-20 bg-gray-50">
+<div class="max-w-7xl mx-auto px-4">
+<h2 class="text-4xl font-bold text-center text-primary mb-16">Our Mission & Vision</h2>
+<div class="grid md:grid-cols-2 gap-12 items-center">
+<div class="space-y-8">
+<div class="fade-in">
+<h3 class="text-2xl font-bold text-primary mb-4">Vision & Mission</h3>
+<p class="text-gray-600 text-xl mb-8">A Society where persons living with multiple disabilities achieve their full potential.</p>
+<h4 class="text-xl font-bold text-primary mb-4">Mission</h4>
+<p class="text-gray-600 text-lg">To promote an inclusive and holistic approach to healthcare for persons with multiple disabilities and to provide access to education and psychosocial support.</p>
+</div>
+<div class="fade-in mt-8">
+<h3 class="text-2xl font-bold text-primary mb-4">About Us</h3>
+<p class="text-gray-600 mb-4">Initiative for Learning Disabilities Kenya (ILDK) is a parent-led charity registered in Kenya comprising parents, caregivers, siblings, and persons living with multiple disabilities and partners. The organization aims to provide a platform for stakeholder engagement and to promote efforts that address challenges for persons living with multiple disabilities.</p>
+<p class="text-gray-600">ILDK is dedicated to being a voice for the voiceless and a champion for persons living with multiple disabilities through community engagement that creates access to education and healthcare.</p>
+</div>
+</div>
+<div class="relative">
+<img src="../photos/002.jpg" class="rounded-2xl shadow-2xl" alt="Team collaboration">
+</div>
+</div>
+</div>
+</section>
+<section id="resources" class="py-20 bg-gray-50">
+<div class="max-w-7xl mx-auto px-4">
+<h2 class="text-4xl font-bold text-center text-primary mb-16">Resources</h2>
+<div class="grid md:grid-cols-2 gap-8 mb-16">
+<div class="bg-white rounded-xl shadow-lg p-6">
+<h3 class="text-2xl font-bold text-primary mb-6">Multiple Disabilities</h3>
+<div class="space-y-4">
+<div class="border rounded-lg">
+<button class="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-50 transition-colors" onclick="toggleSection('section1')">
+<span class="font-semibold">Understanding Multiple Disabilities</span>
+<i class="ri-arrow-down-s-line text-xl transition-transform duration-300" id="icon1"></i>
+</button>
+<div class="hidden transition-all duration-300 ease-in-out overflow-hidden px-6 py-4 border-t" id="section1" style="max-height: 0">
+<div class="space-y-6">
+<div>
+<p class="text-gray-600 mb-4">Multiple disabilities refer to concomitant impairments that create unique educational needs. This section provides comprehensive information about various types of multiple disabilities, their characteristics, and support strategies.</p>
+<div class="grid md:grid-cols-2 gap-6 mt-6">
+<div class="bg-white p-4 rounded-lg shadow-sm border">
+<h6 class="font-semibold mb-3 flex items-center gap-2 text-primary">
+<i class="ri-body-scan-line"></i>
+Physical & Cognitive
+</h6>
+<ul class="space-y-2 text-gray-600">
+<li class="flex items-center gap-2">
+<i class="ri-checkbox-circle-line text-green-500"></i>
+<span>Motor skill challenges</span>
+</li>
+<li class="flex items-center gap-2">
+<i class="ri-checkbox-circle-line text-green-500"></i>
+<span>Cognitive processing delays</span>
+</li>
+<li class="flex items-center gap-2">
+<i class="ri-checkbox-circle-line text-green-500"></i>
+<span>Memory & attention issues</span>
+</li>
+</ul>
+</div>
+<div class="bg-white p-4 rounded-lg shadow-sm border">
+<h6 class="font-semibold mb-3 flex items-center gap-2 text-primary">
+<i class="ri-eye-line"></i>
+Sensory Impairments
+</h6>
+<ul class="space-y-2 text-gray-600">
+<li class="flex items-center gap-2">
+<i class="ri-checkbox-circle-line text-green-500"></i>
+<span>Visual processing disorders</span>
+</li>
+<li class="flex items-center gap-2">
+<i class="ri-checkbox-circle-line text-green-500"></i>
+<span>Auditory challenges</span>
+</li>
+<li class="flex items-center gap-2">
+<i class="ri-checkbox-circle-line text-green-500"></i>
+<span>Sensory integration issues</span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="bg-primary/5 p-6 rounded-xl">
+<h5 class="font-semibold mb-4 text-primary">Support & Resources</h5>
+<div class="grid md:grid-cols-2 gap-6">
+<div class="space-y-4">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-white flex items-center justify-center">
+<i class="ri-mental-health-line text-primary text-xl"></i>
+</div>
+<div>
+<h6 class="font-medium">Psychological Support</h6>
+<p class="text-sm text-gray-600">Individual & group therapy sessions</p>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-white flex items-center justify-center">
+<i class="ri-hospital-line text-primary text-xl"></i>
+</div>
+<div>
+<h6 class="font-medium">Medical Care</h6>
+<p class="text-sm text-gray-600">Specialized healthcare coordination</p>
+</div>
+</div>
+</div>
+<div class="space-y-4">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-white flex items-center justify-center">
+<i class="ri-book-open-line text-primary text-xl"></i>
+</div>
+<div>
+<h6 class="font-medium">Educational Support</h6>
+<p class="text-sm text-gray-600">Customized learning programs</p>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-white flex items-center justify-center">
+<i class="ri-group-line text-primary text-xl"></i>
+</div>
+<div>
+<h6 class="font-medium">Social Integration</h6>
+<p class="text-sm text-gray-600">Community inclusion activities</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-6 flex flex-wrap gap-4">
+<a href="#" class="flex items-center gap-2 px-4 py-2 bg-white border rounded-lg hover:bg-gray-50 transition-colors">
+<i class="ri-file-pdf-line text-primary"></i>
+<span class="text-sm">Download Information Pack</span>
+</a>
+<a href="#" class="flex items-center gap-2 px-4 py-2 bg-white border rounded-lg hover:bg-gray-50 transition-colors">
+<i class="ri-links-line text-primary"></i>
+<span class="text-sm">Related Support Services</span>
+</a>
+<a href="#" class="flex items-center gap-2 px-4 py-2 bg-white border rounded-lg hover:bg-gray-50 transition-colors">
+<i class="ri-calendar-line text-primary"></i>
+<span class="text-sm">Schedule Assessment</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="border rounded-lg">
+<button class="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-50 transition-colors" onclick="toggleSection('section2')">
+<span class="font-semibold">Support Strategies</span>
+<i class="ri-arrow-down-s-line text-xl transition-transform" id="icon2"></i>
+</button>
+<div class="hidden px-6 py-4 border-t" id="section2">
+<p class="text-gray-600 mb-4">Learn about effective educational approaches, assistive technologies, and accommodation strategies that can help children with multiple disabilities succeed in their learning journey.</p>
+<div class="grid md:grid-cols-2 gap-6">
+<div class="bg-gray-50 p-4 rounded-lg">
+<h5 class="font-semibold mb-3 flex items-center gap-2">
+<i class="ri-computer-line text-primary"></i>
+Assistive Technologies
+</h5>
+<ul class="space-y-2 text-gray-600">
+<li>• Speech-to-text software</li>
+<li>• Alternative communication devices</li>
+<li>• Adaptive learning platforms</li>
+<li>• Mobility assistance tools</li>
+</ul>
+</div>
+<div class="bg-gray-50 p-4 rounded-lg">
+<h5 class="font-semibold mb-3 flex items-center gap-2">
+<i class="ri-tools-line text-primary"></i>
+Accommodation Strategies
+</h5>
+<ul class="space-y-2 text-gray-600">
+<li>• Modified curriculum</li>
+<li>• Extended time for tasks</li>
+<li>• Alternative assessment methods</li>
+<li>• Specialized learning materials</li>
+</ul>
+</div>
+</div>
+<div class="mt-6 p-4 bg-primary/5 rounded-lg">
+<h5 class="font-semibold mb-3">Educational Approaches</h5>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+<div class="text-center">
+<div class="w-12 h-12 mx-auto mb-2 bg-primary/10 rounded-full flex items-center justify-center">
+<i class="ri-user-heart-line text-primary"></i>
+</div>
+<span class="text-sm">Individual Learning Plans</span>
+</div>
+<div class="text-center">
+<div class="w-12 h-12 mx-auto mb-2 bg-primary/10 rounded-full flex items-center justify-center">
+<i class="ri-team-line text-primary"></i>
+</div>
+<span class="text-sm">Collaborative Teaching</span>
+</div>
+<div class="text-center">
+<div class="w-12 h-12 mx-auto mb-2 bg-primary/10 rounded-full flex items-center justify-center">
+<i class="ri-emotion-happy-line text-primary"></i>
+</div>
+<span class="text-sm">Positive Reinforcement</span>
+</div>
+<div class="text-center">
+<div class="w-12 h-12 mx-auto mb-2 bg-primary/10 rounded-full flex items-center justify-center">
+<i class="ri-gamepad-line text-primary"></i>
+</div>
+<span class="text-sm">Multi-Sensory Learning</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="border rounded-lg">
+<button class="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-50 transition-colors" onclick="toggleSection('section3')">
+<span class="font-semibold">Resources for Parents</span>
+<i class="ri-arrow-down-s-line text-xl transition-transform" id="icon3"></i>
+</button>
+<div class="hidden px-6 py-4 border-t" id="section3">
+<p class="text-gray-600 mb-4">Access guides, worksheets, and practical tips for parents to support their children with multiple disabilities at home and in educational settings.</p>
+<div class="grid gap-6">
+<div class="bg-gray-50 p-4 rounded-lg">
+<h5 class="font-semibold mb-3">Downloadable Resources</h5>
+<div class="grid md:grid-cols-2 gap-4">
+<a href="#" class="flex items-center gap-3 p-3 bg-white rounded-lg hover:shadow-md transition-shadow">
+<div class="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center">
+<i class="ri-file-pdf-line text-primary"></i>
+</div>
+<div>
+<h6 class="font-medium">Daily Routine Guide</h6>
+<span class="text-sm text-gray-500">PDF • 2.3 MB</span>
+</div>
+</a>
+<a href="#" class="flex items-center gap-3 p-3 bg-white rounded-lg hover:shadow-md transition-shadow">
+<div class="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center">
+<i class="ri-file-excel-line text-primary"></i>
+</div>
+<div>
+<h6 class="font-medium">Progress Tracker</h6>
+<span class="text-sm text-gray-500">Excel • 1.8 MB</span>
+</div>
+</a>
+</div>
+</div>
+<div class="grid md:grid-cols-3 gap-4">
+<div class="p-4 bg-primary/5 rounded-lg">
+<div class="w-12 h-12 mb-3 bg-primary/10 rounded-full flex items-center justify-center">
+<i class="ri-video-line text-primary"></i>
+</div>
+<h5 class="font-semibold mb-2">Video Tutorials</h5>
+<p class="text-sm text-gray-600">Step-by-step guides for at-home activities and exercises</p>
+</div>
+<div class="p-4 bg-primary/5 rounded-lg">
+<div class="w-12 h-12 mb-3 bg-primary/10 rounded-full flex items-center justify-center">
+<i class="ri-calendar-check-line text-primary"></i>
+</div>
+<h5 class="font-semibold mb-2">Weekly Planners</h5>
+<p class="text-sm text-gray-600">Customizable schedules and activity planners</p>
+</div>
+<div class="p-4 bg-primary/5 rounded-lg">
+<div class="w-12 h-12 mb-3 bg-primary/10 rounded-full flex items-center justify-center">
+<i class="ri-community-line text-primary"></i>
+</div>
+<h5 class="font-semibold mb-2">Support Network</h5>
+<p class="text-sm text-gray-600">Connect with other parents and share experiences</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-white rounded-xl shadow-lg p-6">
+<h3 class="text-2xl font-bold text-primary mb-6">Cornelia de Lange Syndrome (CdLS)</h3>
+<div class="relative h-64 mb-6 overflow-hidden rounded-lg">
+<div class="flex transition-transform duration-500" id="imageSlider">
+<img src="../photos/003.jpg" class="w-full h-64 object-cover flex-shrink-0" alt="CdLS Characteristics">
+<img src="../photos/001.jpg" class="w-full h-64 object-cover flex-shrink-0" alt="CdLS Treatment">
+<img src="../photos/005.jpg" class="w-full h-64 object-cover flex-shrink-0" alt="CdLS Support">
+</div>
+<div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
+<button class="w-3 h-3 rounded-full bg-white/50" onclick="showSlide(0)"></button>
+<button class="w-3 h-3 rounded-full bg-white/50" onclick="showSlide(1)"></button>
+<button class="w-3 h-3 rounded-full bg-white/50" onclick="showSlide(2)"></button>
+</div>
+</div>
+<p class="text-gray-600 mb-4">Cornelia de Lange Syndrome is a developmental disorder that affects many parts of the body. Learn about its characteristics, diagnosis, and management strategies.</p>
+</div>
+</div>
+<div class="bg-white rounded-xl shadow-lg p-6">
+<h3 class="text-2xl font-bold text-primary mb-6">Frequently Asked Questions</h3>
+<div class="space-y-4" id="faqAccordion">
+<div class="border rounded-lg">
+<button class="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-50 transition-colors" onclick="toggleFAQ(0)">
+<span class="font-semibold">What services does ILDK provide for children with multiple disabilities?</span>
+<i class="ri-arrow-down-s-line text-xl transition-transform"></i>
+</button>
+<div class="hidden px-6 py-4 border-t">
+<p class="text-gray-600">ILDK offers comprehensive support services including educational assessments, specialized learning programs, therapy sessions, and parent training workshops. We work closely with families and schools to ensure each child receives appropriate support.</p>
+</div>
+</div>
+<div class="border rounded-lg">
+<button class="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-50 transition-colors" onclick="toggleFAQ(1)">
+<span class="font-semibold">How can I get an assessment for my child?</span>
+<i class="ri-arrow-down-s-line text-xl transition-transform"></i>
+</button>
+<div class="hidden px-6 py-4 border-t">
+<p class="text-gray-600">Contact our assessment team to schedule an initial consultation. We'll guide you through our comprehensive assessment process, which includes educational, psychological, and developmental evaluations.</p>
+</div>
+</div>
+<div class="border rounded-lg">
+<button class="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-50 transition-colors" onclick="toggleFAQ(2)">
+<span class="font-semibold">What support is available for families?</span>
+<i class="ri-arrow-down-s-line text-xl transition-transform"></i>
+</button>
+<div class="hidden px-6 py-4 border-t">
+<p class="text-gray-600">We provide parent support groups, counseling services, resource libraries, and regular workshops. Our family support coordinator can help you access various community resources and connect with other families.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="partners" class="py-20">
+<div class="max-w-7xl mx-auto px-4">
+<h2 class="text-4xl font-bold text-center text-primary mb-16">Our Partners</h2>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
+<div class="partner-logo p-6 bg-white rounded-xl shadow-lg transform transition-transform hover:scale-105">
+<img src="https://public.readdy.ai/ai/img_res/6d1e66fe3ff91c302c2a8956e0fe558f.jpg" alt="Partner 1" class="w-full h-auto">
+</div>
+<div class="partner-logo p-6 bg-white rounded-xl shadow-lg transform transition-transform hover:scale-105">
+<img src="https://public.readdy.ai/ai/img_res/8db60353c32ec1843e49987ff3c73933.jpg" alt="Partner 2" class="w-full h-auto">
+</div>
+<div class="partner-logo p-6 bg-white rounded-xl shadow-lg transform transition-transform hover:scale-105">
+<img src="https://public.readdy.ai/ai/img_res/e3ac70c20276d3230cecb4a11b2d58fd.jpg" alt="Partner 3" class="w-full h-auto">
+</div>
+<div class="partner-logo p-6 bg-white rounded-xl shadow-lg transform transition-transform hover:scale-105">
+<img src="https://public.readdy.ai/ai/img_res/29f30da7f5e30a3b834c589abb11f3e5.jpg" alt="Partner 4" class="w-full h-auto">
+</div>
+</div>
+<div class="bg-white rounded-xl shadow-lg p-6 mb-16">
+<h3 class="text-2xl font-bold text-primary mb-6">Global Impact</h3>
+<div class="grid md:grid-cols-2 gap-8 mb-8">
+<div class="space-y-6">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 bg-blue/10 rounded-full flex items-center justify-center">
+<i class="ri-global-line text-blue text-xl"></i>
+</div>
+<div>
+<h4 class="font-semibold text-lg">International Partnerships</h4>
+<p class="text-gray-600">Collaborating with organizations across 15+ countries to share best practices and resources</p>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 bg-blue/10 rounded-full flex items-center justify-center">
+<i class="ri-team-line text-blue text-xl"></i>
+</div>
+<div>
+<h4 class="font-semibold text-lg">Community Outreach</h4>
+<p class="text-gray-600">Reaching over 50,000 families through our global awareness campaigns</p>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 bg-blue/10 rounded-full flex items-center justify-center">
+<i class="ri-book-open-line text-blue text-xl"></i>
+</div>
+<div>
+<h4 class="font-semibold text-lg">Knowledge Exchange</h4>
+<p class="text-gray-600">Facilitating research and educational resource sharing across continents</p>
+</div>
+</div>
+</div>
+<div id="partnerMap" class="h-[400px] rounded-lg overflow-hidden"></div>
+</div>
+<div class="grid md:grid-cols-3 gap-8">
+<div class="bg-white p-6 rounded-xl shadow-lg">
+<div class="flex items-center gap-4 mb-4">
+<div class="w-12 h-12 bg-blue/10 rounded-full flex items-center justify-center">
+<i class="ri-heart-line text-blue text-xl"></i>
+</div>
+<div>
+<h4 class="font-semibold">Lives Impacted</h4>
+<p class="text-3xl font-bold text-blue">100,000+</p>
+</div>
+</div>
+<p class="text-gray-600">Children and families supported through our programs worldwide</p>
+</div>
+<div class="bg-white p-6 rounded-xl shadow-lg">
+<div class="flex items-center gap-4 mb-4">
+<div class="w-12 h-12 bg-blue/10 rounded-full flex items-center justify-center">
+<i class="ri-building-line text-blue text-xl"></i>
+</div>
+<div>
+<h4 class="font-semibold">Partner Centers</h4>
+<p class="text-3xl font-bold text-blue">250+</p>
+</div>
+</div>
+<p class="text-gray-600">Educational and healthcare facilities collaborating globally</p>
+</div>
+<div class="bg-white p-6 rounded-xl shadow-lg">
+<div class="flex items-center gap-4 mb-4">
+<div class="w-12 h-12 bg-blue/10 rounded-full flex items-center justify-center">
+<i class="ri-flag-line text-blue text-xl"></i>
+</div>
+<div>
+<h4 class="font-semibold">Countries Reached</h4>
+<p class="text-3xl font-bold text-blue">25+</p>
+</div>
+</div>
+<p class="text-gray-600">Active presence and partnerships across continents</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="activities" class="py-20 bg-gray-50">
+<div class="max-w-7xl mx-auto px-4">
+<h2 class="text-4xl font-bold text-center text-primary mb-16">Activities & Events</h2>
+<div class="relative">
+<div class="absolute left-1/2 -ml-0.5 w-0.5 h-full bg-gray-200"></div>
+<div class="space-y-12">
+<div class="relative">
+<div class="absolute left-1/2 -ml-4 w-8 h-8 bg-primary rounded-full flex items-center justify-center">
+<i class="ri-calendar-line text-white"></i>
+</div>
+<div class="ml-[calc(50%+2rem)] bg-white p-6 rounded-xl shadow-lg">
+<h3 class="text-xl font-bold text-primary">Teacher Training Workshop</h3>
+<p class="text-gray-500 mb-2">March 15, 2025</p>
+<p class="text-gray-600">Comprehensive training session for educators on supporting students with multiple disabilities in mainstream classrooms.</p>
+</div>
+</div>
+<div class="relative">
+<div class="absolute left-1/2 -ml-4 w-8 h-8 bg-primary rounded-full flex items-center justify-center">
+<i class="ri-calendar-line text-white"></i>
+</div>
+<div class="mr-[calc(50%+2rem)] bg-white p-6 rounded-xl shadow-lg">
+<h3 class="text-xl font-bold text-primary">Parent Support Group Meeting</h3>
+<p class="text-gray-500 mb-2">April 5, 2025</p>
+<p class="text-gray-600">Monthly gathering for parents to share experiences, challenges, and success stories in supporting children with learning disabilities.</p>
+</div>
+</div>
+<div class="relative">
+<div class="absolute left-1/2 -ml-4 w-8 h-8 bg-primary rounded-full flex items-center justify-center">
+<i class="ri-calendar-line text-white"></i>
+</div>
+<div class="ml-[calc(50%+2rem)] bg-white p-6 rounded-xl shadow-lg">
+<h3 class="text-xl font-bold text-primary">Awareness Campaign Launch</h3>
+<p class="text-gray-500 mb-2">May 20, 2025</p>
+<p class="text-gray-600">Community outreach program to raise awareness about learning disabilities and promote inclusive education.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-16 bg-white rounded-xl shadow-lg p-6">
+<h3 class="text-2xl font-bold text-primary mb-6">Peer Support Forum</h3>
+<div class="space-y-6" id="peerSupportForum">
+<div class="border-b pb-6">
+<div class="flex items-start gap-4 mb-4">
+<div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
+<i class="ri-user-line text-primary"></i>
+</div>
+<div class="flex-1">
+<h4 class="font-semibold">Sarah M.</h4>
+<p class="text-gray-600">Looking for advice on sensory integration activities that work well at home. Any suggestions?</p>
+<div class="flex items-center gap-4 mt-2">
+<button class="text-gray-500 hover:text-primary flex items-center gap-1" onclick="handleLike(this)">
+<i class="ri-thumb-up-line"></i> <span>12</span>
+</button>
+<button class="text-gray-500 hover:text-primary" onclick="showReplyForm(this)">
+Reply
+</button>
+</div>
+</div>
+</div>
+</div>
+<div class="border-b pb-6">
+<div class="flex items-start gap-4 mb-4">
+<div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
+<i class="ri-user-line text-primary"></i>
+</div>
+<div class="flex-1">
+<h4 class="font-semibold">James K.</h4>
+<p class="text-gray-600">We've had great success with visual schedules. Happy to share our templates if anyone's interested.</p>
+<div class="flex items-center gap-4 mt-2">
+<button class="text-gray-500 hover:text-primary flex items-center gap-1" onclick="handleLike(this)">
+<i class="ri-thumb-up-line"></i> <span>8</span>
+</button>
+<button class="text-gray-500 hover:text-primary" onclick="showReplyForm(this)">
+Reply
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<form class="mt-6 space-y-4">
+<textarea class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-primary focus:border-primary" rows="3" placeholder="Share your thoughts or questions..."></textarea>
+<button type="submit" class="bg-primary text-white px-6 py-2 !rounded-button hover:bg-primary/90 transition-colors">
+Post Message
+</button>
+</form>
+</div>
+</div>
+</section>
+<section id="work" class="py-20">
+<div class="max-w-7xl mx-auto px-4">
+<h2 class="text-4xl font-bold text-center text-primary mb-16">Our Programs</h2>
+<div class="grid md:grid-cols-2 gap-8 mb-16">
+    <div class="bg-white rounded-xl shadow-lg overflow-hidden fade-in">
+        <img src="../photos/002.jpg" 
+             onerror="this.src='placeholder.jpg';" 
+             class="w-full h-48 object-cover" alt="Education Access">
+        <div class="p-6">
+        <h3 class="text-xl font-bold text-primary mb-3">Education Access</h3>
+        <p class="text-gray-600 mb-4">Ensuring inclusive education through specialized learning programs and support services.</p>
+        <div class="space-y-3 mb-4">
+        <div class="flex items-center gap-2">
+        <i class="ri-check-line text-green-500"></i>
+        <span class="text-gray-600">Individualized education plans</span>
+        </div>
+        <div class="flex items-center gap-2">
+        <i class="ri-check-line text-green-500"></i>
+        <span class="text-gray-600">Adaptive learning tools</span>
+        </div>
+        <div class="flex items-center gap-2">
+        <i class="ri-check-line text-green-500"></i>
+        <span class="text-gray-600">Academic support services</span>
+        </div>
+        </div>
+        <button class="text-blue hover:text-blue/80 flex items-center gap-2 cursor-pointer">
+        Learn More <i class="ri-arrow-right-line"></i>
+        </button>
+        </div>
+        </div>
+<div class="bg-white rounded-xl shadow-lg overflow-hidden fade-in">
+<img src="../photos/003.jpg" class="w-full h-48 object-cover" alt="Education Access">
+<div class="p-6">
+<h3 class="text-xl font-bold text-primary mb-3">Education Access</h3>
+<p class="text-gray-600 mb-4">Ensuring inclusive education through specialized learning programs and support services.</p>
+<div class="space-y-3 mb-4">
+<div class="flex items-center gap-2">
+<i class="ri-check-line text-green-500"></i>
+<span class="text-gray-600">Individualized education plans</span>
+</div>
+<div class="flex items-center gap-2">
+<i class="ri-check-line text-green-500"></i>
+<span class="text-gray-600">Adaptive learning tools</span>
+</div>
+<div class="flex items-center gap-2">
+<i class="ri-check-line text-green-500"></i>
+<span class="text-gray-600">Academic support services</span>
+</div>
+</div>
+<button class="text-blue hover:text-blue/80 flex items-center gap-2 cursor-pointer">
+Learn More <i class="ri-arrow-right-line"></i>
+</button>
+</div>
+</div>
+</div>
+<div class="grid md:grid-cols-2 gap-8">
+<div class="bg-white rounded-xl shadow-lg p-6">
+<h3 class="text-2xl font-bold text-primary mb-6">Program Impact</h3>
+<div class="space-y-6">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 bg-blue/10 rounded-full flex items-center justify-center">
+<i class="ri-user-smile-line text-blue text-xl"></i>
+</div>
+<div>
+<h4 class="font-semibold">Student Success Rate</h4>
+<div class="w-full bg-gray-200 rounded-full h-2 mt-2">
+<div class="bg-blue h-2 rounded-full" style="width: 85%"></div>
+</div>
+<p class="text-sm text-gray-600 mt-1">85% improvement in learning outcomes</p>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 bg-blue/10 rounded-full flex items-center justify-center">
+<i class="ri-group-line text-blue text-xl"></i>
+</div>
+<div>
+<h4 class="font-semibold">Parent Satisfaction</h4>
+<div class="w-full bg-gray-200 rounded-full h-2 mt-2">
+<div class="bg-blue h-2 rounded-full" style="width: 92%"></div>
+</div>
+<p class="text-sm text-gray-600 mt-1">92% positive feedback from families</p>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 bg-blue/10 rounded-full flex items-center justify-center">
+<i class="ri-award-line text-blue text-xl"></i>
+</div>
+<div>
+<h4 class="font-semibold">Teacher Effectiveness</h4>
+<div class="w-full bg-gray-200 rounded-full h-2 mt-2">
+<div class="bg-blue h-2 rounded-full" style="width: 88%"></div>
+</div>
+<p class="text-sm text-gray-600 mt-1">88% increase in teaching confidence</p>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-white rounded-xl shadow-lg p-6">
+<h3 class="text-2xl font-bold text-primary mb-6">Program Features</h3>
+<div class="grid grid-cols-2 gap-4">
+<div class="p-4 bg-gray-50 rounded-lg">
+<div class="w-12 h-12 mb-3 bg-blue/10 rounded-full flex items-center justify-center">
+<i class="ri-calendar-check-line text-blue text-xl"></i>
+</div>
+<h5 class="font-semibold mb-2">Flexible Scheduling</h5>
+<p class="text-sm text-gray-600">Accommodating various time preferences</p>
+</div>
+<div class="p-4 bg-gray-50 rounded-lg">
+<div class="w-12 h-12 mb-3 bg-blue/10 rounded-full flex items-center justify-center">
+<i class="ri-tools-line text-blue text-xl"></i>
+</div>
+<h5 class="font-semibold mb-2">Modern Resources</h5>
+<p class="text-sm text-gray-600">Latest educational tools and materials</p>
+</div>
+<div class="p-4 bg-gray-50 rounded-lg">
+<div class="w-12 h-12 mb-3 bg-blue/10 rounded-full flex items-center justify-center">
+<i class="ri-team-line text-blue text-xl"></i>
+</div>
+<h5 class="font-semibold mb-2">Expert Staff</h5>
+<p class="text-sm text-gray-600">Qualified and experienced educators</p>
+</div>
+<div class="p-4 bg-gray-50 rounded-lg">
+<div class="w-12 h-12 mb-3 bg-blue/10 rounded-full flex items-center justify-center">
+<i class="ri-shield-check-line text-blue text-xl"></i>
+</div>
+<h5 class="font-semibold mb-2">Quality Assurance</h5>
+<p class="text-sm text-gray-600">Regular program evaluation and updates</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section id="contact" class="py-20 bg-gray-50">
+  <div class="max-w-7xl mx-auto px-4">
+    <h2 class="text-4xl font-bold text-center text-primary mb-16">Get In Touch</h2>
+    <div class="grid md:grid-cols-2 gap-12">
+      
+      <!-- Contact Info Section -->
+      <div class="space-y-6">
+        <h3 class="text-2xl font-bold text-primary">Contact Information</h3>
+
+        <!-- Address -->
+        <div class="flex items-center gap-4">
+          <div class="w-12 h-12 flex items-center justify-center bg-primary/10 rounded-full">
+            <i class="ri-map-pin-line text-primary"></i>
+          </div>
+          <div>
+            <h4 class="font-semibold">Location</h4>
+            <p class="text-gray-600">Nairobi, Kenya</p>
+          </div>
+        </div>
+
+        <!-- Phone -->
+        <div class="flex items-center gap-4">
+          <div class="w-12 h-12 flex items-center justify-center bg-primary/10 rounded-full">
+            <i class="ri-phone-line text-primary"></i>
+          </div>
+          <div>
+            <h4 class="font-semibold">Phone</h4>
+            <p class="text-gray-600">+254 123 456 789</p>
+          </div>
+        </div>
+
+        <!-- Email -->
+        <div class="flex items-center gap-4">
+          <div class="w-12 h-12 flex items-center justify-center bg-primary/10 rounded-full">
+            <i class="ri-mail-line text-primary"></i>
+          </div>
+          <div>
+            <h4 class="font-semibold">Email</h4>
+            <p class="text-gray-600">info@ildk.org</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contact Action Buttons -->
+      <div class="space-y-6">
+        <h3 class="text-2xl font-bold text-primary">Connect With Us</h3>
+
+        <!-- Email Button -->
+        <a href="mailto:info@ildk.org" class="block w-full bg-blue text-white px-6 py-3 text-center !rounded-button hover:bg-green-500 transition-colors cursor-pointer">
+          Email Us
+        </a>
+
+        <!-- WhatsApp Button -->
+        <a href="https://wa.me/254123456789?text=Hello%20ILDK%2C%20I%20would%20like%20to%20get%20in%20touch." target="_blank" class="block w-full bg-blue text-white px-6 py-3 text-center !rounded-button hover:bg-green-500 transition-colors cursor-pointer">
+          Message on WhatsApp
+        </a>
+
+        <!-- Call Button -->
+        <a href="tel:+254123456789" class="block w-full bg-blue text-white px-6 py-3 text-center !rounded-button hover:bg-green-500 transition-colors cursor-pointer">
+          Call Us
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+<footer class="bg-blue text-white py-12">
+<div class="max-w-7xl mx-auto px-4">
+<div class="grid md:grid-cols-4 gap-8">
+<div>
+<h3 class="font-['Pacifico'] text-2xl mb-4">
+    <img src="logo.png" alt="ILDK Logo" class="h-18">
+</h3>
+<p class="text-white/80">Empowering lives through inclusive education in Kenya.</p>
+</div>
+<div>
+<h4 class="font-semibold mb-4">Quick Links</h4>
+<ul class="space-y-2">
+<li><a href="#about" class="text-white/80 hover:text-white">About Us</a></li>
+<li><a href="#work" class="text-white/80 hover:text-white">Our Programs</a></li>
+<li><a href="#resources" class="text-white/80 hover:text-white">Resources</a></li>
+<li><a href="#contact" class="text-white/80 hover:text-white">Contact</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-semibold mb-4">Connect</h4>
+<div class="flex space-x-4">
+<a href="#" class="w-10 h-10 flex items-center justify-center bg-white/10 rounded-full hover:bg-white/20">
+<i class="ri-facebook-fill"></i>
+</a>
+<a href="#" class="w-10 h-10 flex items-center justify-center bg-white/10 rounded-full hover:bg-white/20">
+<i class="ri-twitter-fill"></i>
+</a>
+<a href="#" class="w-10 h-10 flex items-center justify-center bg-white/10 rounded-full hover:bg-white/20">
+<i class="ri-instagram-fill"></i>
+</a>
+</div>
+</div>
+<div>
+<h4 class="font-semibold mb-4">Newsletter</h4>
+<form class="flex gap-2">
+<input type="email" placeholder="Your email" class="flex-1 px-4 py-2 rounded-lg bg-white/10 border-none text-white placeholder-white/60">
+<button type="submit" class="bg-white text-primary px-4 !rounded-button hover:bg-white/90 transition-colors cursor-pointer whitespace-nowrap">
+Subscribe
+</button>
+</form>
+</div>
+</div>
+<div class="border-t border-white/20 mt-8 pt-8 text-center text-white/60">
+<p>&copy; 2025 ILDK. All rights reserved.</p>
+</div>
+</div>
+</footer>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+    const fadeInElements = document.querySelectorAll('.fade-in');
+    fadeInElements.forEach(el => {
+        el.classList.add('active');
+    });
+});
+document.addEventListener('DOMContentLoaded', function() {
+let currentSlide = 0;
+const slider = document.getElementById('imageSlider');
+const slides = document.querySelectorAll('#imageSlider img');
+const totalSlides = slides.length;
+function showSlide(index) {
+currentSlide = index;
+slider.style.transform = `translateX(-${index * 100}%)`;
+updateDots();
+}
+function updateDots() {
+const dots = document.querySelectorAll('#imageSlider + div button');
+dots.forEach((dot, index) => {
+dot.style.backgroundColor = index === currentSlide ? 'rgba(255, 255, 255, 0.9)' : 'rgba(255, 255, 255, 0.5)';
+});
+}
+setInterval(() => {
+currentSlide = (currentSlide + 1) % totalSlides;
+showSlide(currentSlide);
+}, 5000);
+function toggleSection(id) {
+const section = document.getElementById(id);
+const icon = document.getElementById('icon' + id.slice(-1));
+const content = section.querySelector('div');
+if (section.classList.contains('hidden')) {
+section.classList.remove('hidden');
+section.style.maxHeight = content.offsetHeight + 'px';
+icon.style.transform = 'rotate(180deg)';
+} else {
+section.style.maxHeight = '0px';
+icon.style.transform = 'rotate(0deg)';
+setTimeout(() => {
+section.classList.add('hidden');
+}, 300);
+}
+}
+const faqItems = document.querySelectorAll('#faqAccordion > div');
+function toggleFAQ(index) {
+const content = faqItems[index].querySelector('div');
+const icon = faqItems[index].querySelector('i');
+content.classList.toggle('hidden');
+icon.style.transform = content.classList.contains('hidden') ? 'rotate(0deg)' : 'rotate(180deg)';
+}
+const map = echarts.init(document.getElementById('partnerMap'));
+const option = {
+animation: false,
+geo: {
+map: 'world',
+roam: true,
+zoom: 1.2,
+label: {
+show: false
+},
+itemStyle: {
+areaColor: '#eee',
+borderColor: '#ddd'
+},
+emphasis: {
+itemStyle: {
+areaColor: '#FFC300'
+}
+}
+},
+series: [{
+type: 'scatter',
+coordinateSystem: 'geo',
+data: [
+{name: 'Kenya', value: [36.8172, -1.2864, 20]},
+{name: 'UK', value: [-0.1276, 51.5074, 10]},
+{name: 'USA', value: [-95.7129, 37.0902, 15]},
+{name: 'Australia', value: [133.7751, -25.2744, 8]}
+],
+symbolSize: 12,
+itemStyle: {
+color: '#FFC300'
+},
+emphasis: {
+scale: 1.5
+}
+}]
+};
+map.setOption(option);
+window.addEventListener('resize', () => map.resize());
+function handleLike(button) {
+const countSpan = button.querySelector('span');
+let count = parseInt(countSpan.textContent);
+countSpan.textContent = count + 1;
+button.classList.add('text-primary');
+}
+function showReplyForm(button) {
+const existingForm = document.querySelector('.reply-form');
+if (existingForm) existingForm.remove();
+const form = document.createElement('div');
+form.className = 'reply-form mt-4 ml-14';
+form.innerHTML = `
+<textarea class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-primary focus:border-primary text-sm" rows="2" placeholder="Write your reply..."></textarea>
+<div class="mt-2 flex justify-end">
+<button class="bg-primary text-white px-4 py-1 text-sm !rounded-button hover:bg-primary/90 transition-colors">Reply</button>
+</div>
+`;
+button.parentElement.parentElement.appendChild(form);
+}
+window.toggleSection = toggleSection;
+window.toggleFAQ = toggleFAQ;
+window.handleLike = handleLike;
+window.showReplyForm = showReplyForm;
+window.showSlide = showSlide;
+const fadeElements = document.querySelectorAll('.fade-in');
+const observer = new IntersectionObserver((entries) => {
+entries.forEach(entry => {
+if (entry.isIntersecting) {
+entry.target.classList.add('visible');
+}
+});
+});
+fadeElements.forEach(element => observer.observe(element));
+const counters = document.querySelectorAll('.counter');
+counters.forEach(counter => {
+const target = parseInt(counter.getAttribute('data-target'));
+const duration = 2000;
+const increment = target / (duration / 16);
+let current = 0;
+const updateCounter = () => {
+current += increment;
+if (current < target) {
+counter.textContent = Math.floor(current);
+requestAnimationFrame(updateCounter);
+} else {
+counter.textContent = target;
+}
+};
+const counterObserver = new IntersectionObserver((entries) => {
+if (entries[0].isIntersecting) {
+updateCounter();
+counterObserver.unobserve(counter);
+}
+});
+counterObserver.observe(counter);
+});
+document.getElementById('contactForm').addEventListener('submit', function(e) {
+e.preventDefault();
+const successMessage = document.createElement('div');
+successMessage.className = 'fixed top-4 right-4 bg-green-500 text-white px-6 py-3 rounded-lg shadow-lg';
+successMessage.textContent = 'Message sent successfully!';
+document.body.appendChild(successMessage);
+setTimeout(() => successMessage.remove(), 3000);
+this.reset();
+});
+});
+</script>
+</body>
+</html>
